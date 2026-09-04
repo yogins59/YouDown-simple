@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>YouDown</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div id="welcome" class="welcome">
+  <div>
+    <div class="logo">↓</div>
+    <h1>YouDown</h1>
+    <p>Selamat datang</p>
+    <button id="enter">→</button>
+  </div>
+</div>
+
+<div id="app" class="hide">
+<header>
+  <button id="menu">☰</button>
+  <div class="brand"><span>↓</span>YouDown</div>
+</header>
+
+<aside id="drawer">
+  <button id="close">×</button>
+  <button id="theme">◐ &nbsp; Theme <small id="themeText">Hitam</small></button>
+  <button id="about">ⓘ &nbsp; About</button>
+  <button id="settings">⚙ &nbsp; Setting</button>
+</aside>
+<div id="shade"></div>
+
+<main>
+  <h2>Pengunduh Audio &amp; Video</h2>
+  <p class="sub">Tempel link, render, pilih format, lalu download.</p>
+
+  <section class="preview" id="preview">
+    <div class="empty">Preview video</div>
+  </section>
+
+  <div class="input">
+    <input id="url" placeholder="Tempel link YouTube, Facebook, Instagram, X, TikTok..." />
+    <button id="render">RENDER</button>
+  </div>
+
+  <section id="info" class="info hide"></section>
+
+  <section class="formats">
+    <button class="fold" data-target="videoBox">Video <span>⌄</span></button>
+    <div id="videoBox" class="foldbody"></div>
+    <button class="fold" data-target="audioBox">Audio <span>⌄</span></button>
+    <div id="audioBox" class="foldbody"></div>
+  </section>
+
+  <button id="download" class="download" disabled>Pilih format download</button>
+  <div id="status"></div>
+
+  <section class="result">
+    <h3>Hasil Download</h3>
+    <div id="files"><p class="muted">Belum ada hasil.</p></div>
+  </section>
+</main>
+</div>
+
+<div id="modal" class="modal hide"><div class="modalbox">
+  <button id="modalClose">×</button><div id="modalContent"></div>
+</div></div>
+
+<script src="/js/app.js"></script>
+</body>
+</html>
